@@ -4,25 +4,28 @@ import java.io.IOException;
 import java.io.InputStream;
 
 import org.antlr.v4.runtime.*;
-import org.antlr.v4.runtime.tree.ParseTreeWalker;
+import org.antlr.v4.runtime.tree.ParseTree;
 
-/**
- * @author Tom Everett
- */
 class Main {
-   public static void main(String[] args) {
-      System.out.println("Antlr4 Example");
-      try {
-         InputStream inputStream = Main.class.getResourceAsStream("/Main.java");
-         Lexer lexer = new Java8Lexer(CharStreams.fromStream(inputStream));
+    public static void main(String[] args) {
+        try {
 
-         TokenStream tokenStream = new CommonTokenStream(lexer);
-         Java8Parser java8Parser = new Java8Parser(tokenStream);
+            InputStream inputStream = Main.class.getResourceAsStream("/Example.java");
+            Lexer lexer = new Java8Lexer(CharStreams.fromStream(inputStream));
 
-         Java8Parser.CompilationUnitContext tree = java8Parser.compilationUnit();
-         System.out.println(tree.toStringTree());
-      } catch (IOException e) {
-         e.printStackTrace();
-      }
-   }
+            TokenStream tokenStream = new CommonTokenStream(lexer);
+            Java8Parser java8Parser = new Java8Parser(tokenStream);
+
+            java8Parser.setBuildParseTree(true);
+            ParseTree tree = java8Parser.compilationUnit(); // parse
+
+            Java8ParserBaseVisitor Visitor = new Java8ParserBaseVisitor();
+            Object result = Visitor.visit(tree);
+
+            System.out.println(tree.toStringTree(java8Parser));
+            System.out.println("visitor result = " + result);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }
