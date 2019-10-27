@@ -1,7 +1,7 @@
 package com.phodal.coca.analysis.identifier;
 
-import com.phodal.coca.Java8Lexer;
-import com.phodal.coca.Java8Parser;
+import com.phodal.coca.JavaLexer;
+import com.phodal.coca.JavaParser;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.CharStreams;
 import org.antlr.v4.runtime.CommonTokenStream;
@@ -13,9 +13,9 @@ import java.nio.file.Path;
 public class JavaFileParser {
     public static ParseTree parse(Path path) throws IOException {
         CharStream stream = CharStreams.fromPath(path);
-        Java8Lexer lexer = new Java8Lexer(stream);
+        JavaLexer lexer = new JavaLexer(stream);
         CommonTokenStream tokens = new CommonTokenStream(lexer);
-        Java8Parser parser = new Java8Parser(tokens);
+        JavaParser parser = new JavaParser(tokens);
 
         return parser.compilationUnit();
     }
