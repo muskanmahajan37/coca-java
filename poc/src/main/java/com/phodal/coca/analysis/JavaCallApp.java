@@ -1,6 +1,5 @@
 package com.phodal.coca.analysis;
 
-import com.phodal.coca.Java8ParserBaseVisitor;
 import com.phodal.coca.JavaParserBaseVisitor;
 import com.phodal.coca.analysis.calls.JavaCallVisitor;
 import com.phodal.coca.analysis.calls.JavaDaoParser;
