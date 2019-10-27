@@ -1,8 +1,11 @@
 package com.phodal.coca;
 
 import com.phodal.coca.analysis.JavaCallApp;
+import com.phodal.coca.analysis.calls.JavaDaoParser;
 import com.phodal.coca.analysis.calls.plugins.JavaDaoStringParser;
 import com.phodal.coca.analysis.identifier.JavaIdentifierApp;
+import com.phodal.coca.factory.DaoParserProvider;
+import com.phodal.coca.factory.JavaDaoParserFactory;
 
 import java.io.File;
 import java.io.IOException;

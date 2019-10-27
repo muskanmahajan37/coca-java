@@ -23,6 +23,10 @@
 				<groupId>org.antlr</groupId>
 				<artifactId>antlr4-maven-plugin</artifactId>
 				<version>${antlr.version}</version>
+				<configuration>
+					<visitor>true</visitor>
+					<listener>true</listener>
+				</configuration>
 				<executions>
 					<execution>
 						<goals>
@@ -44,7 +48,7 @@
 						<configuration>
 							<transformers>
 								<transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-									<mainClass>com.phodal.coca.Main</mainClass>
+									<mainClass>com.khubla.antlr4example.Main</mainClass>
 								</transformer>
 							</transformers>
 						</configuration>
