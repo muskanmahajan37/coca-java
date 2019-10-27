@@ -5,20 +5,18 @@ import com.phodal.coca.analysis.calls.plugins.JavaDaoStringParser;
 
 import java.io.File;
 import java.io.IOException;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.ExecutionException;
 
 public class ParseJava {
-    public void startParse() throws IOException {
+    public void startParse() throws IOException, ExecutionException, InterruptedException {
         JavaDaoStringParser javaDaoStringParser = new JavaDaoStringParser();
 
-        String file = new File("src/main/resources/Example.java").getAbsolutePath();
-        Path path = Paths.get(file);
+        String file = new File("src/main").getAbsolutePath();
         JavaCallApp javaCallApp = new JavaCallApp(javaDaoStringParser);
         List<String> clzs =  new ArrayList<>();
 
-        javaCallApp.parse(path, clzs);
+        javaCallApp.analysisDir(file, clzs);
     }
 }

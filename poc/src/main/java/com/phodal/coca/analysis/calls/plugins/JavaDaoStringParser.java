@@ -6,6 +6,6 @@ import com.phodal.coca.analysis.calls.model.JMethodCall;
 public class JavaDaoStringParser implements JavaDaoParser {
     @Override
     public void parse(JMethodCall currentMethodCall, String body) {
-
+        System.out.println(body);
     }
 }
