@@ -48,7 +48,7 @@
 						<configuration>
 							<transformers>
 								<transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-									<mainClass>com.khubla.antlr4example.Main</mainClass>
+									<mainClass>com.phodal.coca.Main</mainClass>
 								</transformer>
 							</transformers>
 						</configuration>
