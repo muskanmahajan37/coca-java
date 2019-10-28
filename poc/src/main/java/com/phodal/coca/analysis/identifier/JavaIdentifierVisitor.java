@@ -1,7 +1,7 @@
 package com.phodal.coca.analysis.identifier;
 
-import com.phodal.coca.JavaParser;
-import com.phodal.coca.JavaParserBaseVisitor;
+import com.phodal.coca.java.JavaParser;
+import com.phodal.coca.java.JavaParserBaseVisitor;
 
 public class JavaIdentifierVisitor extends JavaParserBaseVisitor {
 

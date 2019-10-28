@@ -1,7 +1,7 @@
 package com.phodal.coca.analysis.identifier;
 
-import com.phodal.coca.JavaLexer;
-import com.phodal.coca.JavaParser;
+import com.phodal.coca.java.JavaLexer;
+import com.phodal.coca.java.JavaParser;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.CharStreams;
 import org.antlr.v4.runtime.CommonTokenStream;

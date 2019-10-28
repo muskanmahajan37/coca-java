@@ -1,7 +1,7 @@
 package com.phodal.coca.analysis.calls;
 
-import com.phodal.coca.JavaParser;
-import com.phodal.coca.JavaParserBaseVisitor;
+import com.phodal.coca.java.JavaParser;
+import com.phodal.coca.java.JavaParserBaseVisitor;
 import com.phodal.coca.analysis.calls.model.JMethodCall;
 import org.antlr.v4.runtime.tree.ParseTree;
 

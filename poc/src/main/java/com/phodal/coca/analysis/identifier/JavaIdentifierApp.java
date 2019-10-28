@@ -1,7 +1,7 @@
 package com.phodal.coca.analysis.identifier;
 
 
-import com.phodal.coca.JavaParserBaseVisitor;
+import com.phodal.coca.java.JavaParserBaseVisitor;
 import com.phodal.coca.analysis.utils.ProcessFiles;
 import org.antlr.v4.runtime.tree.ParseTree;
 
